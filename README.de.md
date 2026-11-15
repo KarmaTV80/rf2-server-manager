@@ -4,6 +4,8 @@
 
 **Download:** [neueste Version](https://github.com/KarmaTV80/rf2-server-manager/releases/latest)
 
+**Projekt unterstützen:** [mit PayPal spenden](https://www.paypal.com/donate/?business=3T7ZTAXBQY3EN&no_recurring=0&item_name=Sostieni+Karma+TV%3A+progetti+e+canali+YouTube%2C+Instagram%2C+TikTok.+Support+my+projects+and+channels.+Grazie%21+Thanks%21&currency_code=EUR) – die App ist kostenlos, jede Spende hilft, sie aktuell zu halten.
+
 ---
 
 Ein Windows-Programm, das einen RF2 Dedicated Server einrichtet und startet.
