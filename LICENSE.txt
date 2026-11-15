@@ -1,0 +1,18 @@
+RF2 Server Manager - Condizioni d'uso / Terms of use
+Copyright (c) 2026 Karma TV. Tutti i diritti riservati. All rights reserved.
+
+ITALIANO
+1. RF2 Server Manager e' gratuito: puoi usarlo liberamente, anche per campionati e leghe.
+2. Non e' consentito modificarlo, decompilarlo, disassemblarlo, rivenderlo, noleggiarlo
+   o distribuirlo da siti diversi da quello ufficiale. Per condividerlo usa solo il link ufficiale.
+3. Il programma e' fornito "cosi' com'e'", senza garanzie di alcun tipo. L'autore non risponde
+   di danni o perdite di dati: conserva sempre un backup della cartella del server.
+4. Strumento non ufficiale: RF2 e i suoi marchi appartengono ai rispettivi proprietari.
+
+ENGLISH
+1. RF2 Server Manager is free: you may use it freely, including for championships and leagues.
+2. You may not modify, decompile, disassemble, resell, rent or distribute it from any site other
+   than the official one. To share it, use only the official link.
+3. The program is provided "as is", without warranty of any kind. The author is not liable for
+   damage or data loss: always keep a backup of the server folder.
+4. Unofficial tool: RF2 and its trademarks belong to their respective owners.
