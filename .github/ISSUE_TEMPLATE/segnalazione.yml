@@ -1,0 +1,42 @@
+name: Report a problem / Segnala un problema
+description: Something in RF2 Server Manager doesn't work / Qualcosa in RF2 Server Manager non funziona
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! Reports are **public**: don't write passwords, IP addresses or other people's names.
+        In the app, **Report** (top right) or **Info → Report a problem** prepares the log without personal data: attach that file below.
+
+        Grazie della segnalazione! Le segnalazioni sono **pubbliche**: non scrivere password, indirizzi IP o nomi di altre persone.
+        Nell'app, **Segnala** (in alto a destra) o **Info → Segnala un problema** prepara il registro senza dati personali: allega quel file qui sotto.
+  - type: input
+    id: version
+    attributes:
+      label: App version / Versione dell'app
+      description: Shown at the bottom left of the app / In basso a sinistra nell'app
+      placeholder: "1.0.6"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What were you doing? / Cosa stavi facendo?
+      description: The step of the app and the button you pressed / Il passo dell'app e il pulsante che hai premuto
+      placeholder: "Step 4, Create event with Porsche 992 Cup on Spa / Passo 4, Crea evento con Porsche 992 Cup a Spa"
+    validations:
+      required: true
+  - type: textarea
+    id: happened
+    attributes:
+      label: What happened? / Cosa è successo?
+      description: The error message, or what you expected instead / Il messaggio di errore, o cosa ti aspettavi
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Log / Registro
+      description: Drag here the file saved by "Report a problem", or paste its text / Trascina qui il file salvato da "Segnala un problema", o incolla il suo testo
+    validations:
+      required: false

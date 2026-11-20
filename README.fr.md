@@ -63,7 +63,9 @@ Sur le routeur, redirige vers l'IP du PC :
 - Réglages et journal : `%AppData%\RF2ServerManager`
 - Mots de passe : seulement dans les fichiers de configuration du serveur, qui les garde en clair. Ils ne vont pas dans les profils.
 
-En cas de problème, envoie le journal du dossier `logs`. Le bouton **Ouvrir le dossier des journaux** est à l'étape 1. Préparer.
+## Signaler un problème
+
+Utilise **Signaler** en haut à droite de l'app, ou **Info → Signaler un problème** (à partir de la version 1.0.6). L'app affiche le journal déjà sans nom d'utilisateur Windows, noms des pilotes, Steam ID, adresses IP et messages du chat, l'enregistre dans un fichier texte et ouvre sur GitHub le [formulaire de signalement](https://github.com/KarmaTV80/rf2-server-manager/issues/new?template=segnalazione.yml) : décris ce qui s'est passé et joins le fichier. Les signalements sont publics et demandent un compte GitHub gratuit. Le bouton **Ouvrir le dossier des journaux** est à l'étape 1. Préparer.
 
 ## Limites connues
 
