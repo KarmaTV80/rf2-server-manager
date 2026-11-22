@@ -54,6 +54,24 @@ Leite am Router auf die IP des PCs weiter:
 
 **Öffne niemals die Ports 5397 und 5398**: Sie steuern den Server und das Spiel. Setze immer ein Beitrittspasswort und ein Admin-Passwort, die sich unterscheiden. Der Button **Netzwerk und Ports prüfen** in Schritt 10. Server hilft dir bei der Prüfung.
 
+### CGNAT, doppelter Router und VPN
+
+Wenn dein Anbieter CGNAT nutzt (eine öffentliche IP für mehrere Kunden), bringt Portfreigabe am Router nichts: Freunde erreichen den Server nicht. Ab Version 1.0.7 meldet **Netzwerk und Ports prüfen**, wenn es auf dem Weg ins Internet eine CGNAT-Adresse findet. Du kannst auch die WAN-IP auf der Seite deines Routers mit der öffentlichen IP in der App vergleichen: Sind sie verschieden, bist du hinter CGNAT oder hinter einem zweiten Router. Frag dann deinen Anbieter nach einer öffentlichen IP oder gib die Ports auf beiden Routern frei. VPN-Lösungen (Hamachi, ZeroTier und ähnliche) werden von der App nicht unterstützt.
+
+## Server auf demselben PC wie das Spiel
+
+Ein eigener PC ist ideal, aber viele haben nur einen, und die App ist auch für diesen Fall gemacht:
+
+- Der dedizierte Server ist ein eigenes Programm: Die App installiert ihn mit SteamCMD in einem eigenen Ordner, nie im Ordner des Spiels.
+- Spiel und Server nutzen beide Port 5397 für ihre Weboberfläche: Vor jedem Start legt die App die des Servers auf 5398, damit sie sich nicht stören.
+- Den Server zu starten, während das Spiel lädt, bremst beide: Mit **Zuerst das Spiel starten** wartet die App, bis das Spiel im Menü ist, und startet dann den Server selbst.
+- Für große Events ist ein eigener PC trotzdem besser: Der Server nimmt dem Spiel keine Ressourcen weg.
+
+## Pakete und kostenpflichtige DLC
+
+- Freunde laden Autos, Strecken und Events nur aus dem Ordner `Packages` des Servers: Jede `.rfcmp` und `.rfmod` muss dort liegen, sonst bekommen sie beim Beitreten einen Fehler. Die Bibliothek markiert, was fehlt (*Paket fehlt*), und kann es aus dem Spiel kopieren; mit der App erstellte Events legen ihre `.rfmod` selbst dort ab.
+- Offizielle kostenpflichtige DLC öffnet der Server nur mit `ServerUnlock.bin`, die das Spiel in seinem Ordner `UserData` für deine Inhalte erstellt. Die App kopiert sie vor dem Installieren von Inhalten und vor jedem Start in den Ordner `UserData` des Servers. Läuft der Server auf einem anderen PC, kopiere die Datei selbst, und erneut nach dem Kauf neuer DLC.
+
 ## Anti-Cheat
 
 In Schritt 9. Chat und Ping kann die App Fahrer mit unmöglichen Runden oder Geschwindigkeiten und Sprünge von einem Punkt der Strecke zum anderen melden; dabei vergleicht sie jeden Fahrer mit den anderen derselben Klasse. Sie trennt niemanden: Sie warnt und schreibt alles ins Verdachtsprotokoll (`sospetti.log`), dann entscheidet, wer den Server betreibt. Der Server sieht nicht in die PCs der Fahrer, er findet also die Auswirkungen von Cheats, nicht die Programme.

@@ -54,6 +54,24 @@ Sul router inoltra verso l'IP del PC:
 
 **Non aprire mai le porte 5397 e 5398**: controllano il server e il gioco. Imposta sempre una password d'ingresso e una password admin diverse tra loro. Il pulsante **Controlla rete e porte** nel passo 10. Server ti aiuta nelle verifiche.
 
+### CGNAT, doppio router e VPN
+
+Se il tuo provider usa il CGNAT (un IP pubblico condiviso tra più clienti), aprire le porte sul router non serve: gli amici non raggiungono il server. Dalla versione 1.0.7 **Controlla rete e porte** ti avvisa quando trova un indirizzo CGNAT sulla strada verso internet. Puoi anche confrontare l'IP WAN mostrato nella pagina del router con l'IP pubblico mostrato dall'app: se sono diversi, sei dietro CGNAT o dietro un secondo router. In quel caso chiedi al provider un IP pubblico, oppure apri le porte su tutti e due i router. Le VPN (Hamachi, ZeroTier e simili) non sono gestite dall'app.
+
+## Server sullo stesso PC del gioco
+
+Un PC separato è la soluzione ideale, ma molti ne hanno uno solo, e l'app è fatta anche per questo caso:
+
+- Il server dedicato è un programma separato: l'app lo installa con SteamCMD in una cartella sua, mai dentro quella del gioco.
+- Gioco e server usano tutti e due la porta 5397 per la loro interfaccia web: prima di ogni avvio l'app sposta quella del server sulla 5398, così non si scontrano.
+- Avviare il server mentre il gioco carica rallenta tutti e due: con **Avvia prima il gioco** l'app aspetta che il gioco sia al menu, poi avvia il server da sola.
+- Per eventi grandi un PC separato resta meglio: il server non toglie risorse al gioco.
+
+## Pacchetti e DLC a pagamento
+
+- Gli amici scaricano auto, piste ed eventi solo dalla cartella `Packages` del server: ogni `.rfcmp` e `.rfmod` deve essere lì, altrimenti entrando ricevono un errore. La Libreria segna cosa manca (*Manca il pacchetto*) e può copiarlo dal gioco, e gli eventi creati con l'app mettono lì il loro `.rfmod` da soli.
+- I DLC ufficiali a pagamento si aprono sul server solo con `ServerUnlock.bin`, che il gioco crea nella sua cartella `UserData` per i contenuti che possiedi. L'app lo copia nella cartella `UserData` del server prima di installare i contenuti e prima di ogni avvio. Se il server è su un altro PC, copia tu quel file, e di nuovo dopo aver comprato nuovi DLC.
+
 ## Anticheat
 
 Nel passo 9. Chat e ping l'app può segnalare i piloti con giri o velocità impossibili e i salti da un punto all'altro della pista, confrontando ognuno con gli altri della stessa classe. Non scollega nessuno: avvisa e scrive tutto nel registro dei sospetti (`sospetti.log`), poi decide chi gestisce il server. Il server non vede dentro il PC dei piloti, quindi trova gli effetti dei trucchi, non i programmi.

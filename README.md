@@ -54,6 +54,24 @@ On the router, forward to the PC's IP:
 
 **Never open ports 5397 and 5398**: they control the server and the game. Always set a join password and an admin password that differ from each other. The **Check network and ports** button in step 10. Server helps you check.
 
+### CGNAT, double router and VPN
+
+If your provider uses CGNAT (one public IP shared by several customers), forwarding ports on the router does nothing: friends can't reach the server. From version 1.0.7 **Check network and ports** tells you when it finds a CGNAT address on the way to the internet. You can also compare the WAN IP shown on your router's page with the public IP shown by the app: if they differ, you are behind CGNAT or behind a second router. Then ask your provider for a public IP, or forward the ports on both routers. VPN setups (Hamachi, ZeroTier and similar) are not handled by the app.
+
+## Server on the same PC as the game
+
+A separate PC is the ideal setup, but many people have only one, and the app is designed for that case too:
+
+- The dedicated server is a separate program: the app installs it with SteamCMD in a folder of its own, never inside the game's folder.
+- Game and server both use port 5397 for their web interface: before every start the app moves the server's to 5398, so they don't clash.
+- Starting the server while the game is loading slows both down: with **Start the game first** the app waits until the game is in the menu, then starts the server by itself.
+- For big events a separate PC is still better: the server doesn't take resources away from the game.
+
+## Packages and paid DLC
+
+- Friends download cars, tracks and events only from the server's `Packages` folder: every `.rfcmp` and `.rfmod` must be there, or they get an error when joining. The Library marks what is missing (*Package missing*) and can copy it from the game, and events created with the app put their `.rfmod` there by themselves.
+- Official paid DLC opens on the server only with `ServerUnlock.bin`, which the game creates in its `UserData` folder for the content you own. The app copies it into the server's `UserData` folder before installing content and before every start. If the server runs on another PC, copy that file by hand, and again after buying new DLC.
+
 ## Anti-cheat
 
 In step 9. Chat and ping the app can report drivers with impossible laps or speeds and jumps from one point of the track to another, comparing each driver with the others in the same class. It disconnects nobody: it warns you and writes everything to the suspects log (`sospetti.log`), then whoever runs the server decides. The server cannot see inside the drivers' PCs, so it finds the effects of cheats, not the programs.

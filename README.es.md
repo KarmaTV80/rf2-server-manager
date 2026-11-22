@@ -54,6 +54,24 @@ En el router redirige hacia la IP del PC:
 
 **No abras nunca los puertos 5397 y 5398**: controlan el servidor y el juego. Pon siempre una contraseña de acceso y una contraseña de administrador distintas entre sí. El botón **Comprobar red y puertos** del paso 10. Servidor te ayuda a comprobarlo.
 
+### CGNAT, doble router y VPN
+
+Si tu proveedor usa CGNAT (una IP pública compartida entre varios clientes), abrir puertos en el router no sirve: los amigos no llegan al servidor. Desde la versión 1.0.7 **Comprobar red y puertos** te avisa cuando encuentra una dirección CGNAT en el camino hacia internet. También puedes comparar la IP WAN que muestra la página del router con la IP pública que muestra la app: si son distintas, estás detrás de CGNAT o de un segundo router. En ese caso pide a tu proveedor una IP pública, o abre los puertos en los dos routers. Las VPN (Hamachi, ZeroTier y similares) no las gestiona la app.
+
+## Servidor en el mismo PC que el juego
+
+Un PC aparte es lo ideal, pero mucha gente tiene uno solo, y la app está pensada también para ese caso:
+
+- El servidor dedicado es un programa aparte: la app lo instala con SteamCMD en su propia carpeta, nunca dentro de la del juego.
+- Juego y servidor usan los dos el puerto 5397 para su interfaz web: antes de cada inicio la app mueve la del servidor al 5398, así no chocan.
+- Iniciar el servidor mientras el juego carga ralentiza a los dos: con **Iniciar primero el juego** la app espera a que el juego esté en el menú y luego inicia el servidor sola.
+- Para eventos grandes sigue siendo mejor un PC aparte: el servidor no quita recursos al juego.
+
+## Paquetes y DLC de pago
+
+- Los amigos descargan coches, circuitos y eventos solo de la carpeta `Packages` del servidor: cada `.rfcmp` y `.rfmod` tiene que estar ahí, o al entrar reciben un error. La Biblioteca marca lo que falta (*Falta el paquete*) y puede copiarlo del juego, y los eventos creados con la app dejan ahí su `.rfmod` solos.
+- Los DLC oficiales de pago solo se abren en el servidor con `ServerUnlock.bin`, que el juego crea en su carpeta `UserData` para el contenido que tienes. La app lo copia en la carpeta `UserData` del servidor antes de instalar contenido y antes de cada inicio. Si el servidor está en otro PC, copia tú ese archivo, y otra vez después de comprar DLC nuevos.
+
 ## Antitrampas
 
 En el paso 9. Chat y ping la app puede señalar a los pilotos con vueltas o velocidades imposibles y los saltos de un punto a otro de la pista, comparando a cada uno con los demás de la misma clase. No desconecta a nadie: avisa y escribe todo en el registro de sospechosos (`sospetti.log`), y luego decide quien gestiona el servidor. El servidor no ve dentro del PC de los pilotos, así que encuentra los efectos de las trampas, no los programas.

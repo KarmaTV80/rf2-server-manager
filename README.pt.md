@@ -54,6 +54,24 @@ No roteador, redirecione para o IP do PC:
 
 **Nunca abra as portas 5397 e 5398**: elas controlam o servidor e o jogo. Defina sempre uma senha de entrada e uma senha de admin diferentes entre si. O botão **Verificar rede e portas** no passo 10. Servidor ajuda você a verificar.
 
+### CGNAT, roteador duplo e VPN
+
+Se o seu provedor usa CGNAT (um IP público compartilhado entre vários clientes), abrir portas no roteador não adianta: os amigos não chegam ao servidor. A partir da versão 1.0.7, **Verificar rede e portas** avisa quando encontra um endereço CGNAT no caminho até a internet. Você também pode comparar o IP WAN mostrado na página do roteador com o IP público mostrado pelo app: se forem diferentes, você está atrás de CGNAT ou de um segundo roteador. Nesse caso peça ao provedor um IP público, ou abra as portas nos dois roteadores. VPNs (Hamachi, ZeroTier e similares) não são tratadas pelo app.
+
+## Servidor no mesmo PC do jogo
+
+Um PC separado é o ideal, mas muita gente tem só um, e o app foi feito também para esse caso:
+
+- O servidor dedicado é um programa separado: o app o instala com o SteamCMD em uma pasta própria, nunca dentro da pasta do jogo.
+- Jogo e servidor usam os dois a porta 5397 para a interface web: antes de cada início o app passa a do servidor para a 5398, assim não há conflito.
+- Iniciar o servidor enquanto o jogo carrega deixa os dois lentos: com **Iniciar primeiro o jogo** o app espera o jogo chegar ao menu e depois inicia o servidor sozinho.
+- Para eventos grandes um PC separado continua sendo melhor: o servidor não tira recursos do jogo.
+
+## Pacotes e DLC pagos
+
+- Os amigos baixam carros, pistas e eventos só da pasta `Packages` do servidor: cada `.rfcmp` e `.rfmod` precisa estar lá, senão recebem um erro ao entrar. A Biblioteca marca o que falta (*Falta o pacote*) e pode copiar do jogo, e os eventos criados com o app colocam lá o seu `.rfmod` sozinhos.
+- Os DLC oficiais pagos só abrem no servidor com o `ServerUnlock.bin`, que o jogo cria na pasta `UserData` dele para o conteúdo que você tem. O app o copia para a pasta `UserData` do servidor antes de instalar conteúdo e antes de cada início. Se o servidor estiver em outro PC, copie esse arquivo você mesmo, e de novo depois de comprar novos DLC.
+
 ## Antitrapaça
 
 No passo 9. Chat e ping o app pode sinalizar pilotos com voltas ou velocidades impossíveis e saltos de um ponto a outro da pista, comparando cada um com os outros da mesma classe. Não desconecta ninguém: avisa e escreve tudo no registro de suspeitos (`sospetti.log`), e depois quem administra o servidor decide. O servidor não vê dentro do PC dos pilotos, por isso encontra os efeitos das trapaças, não os programas.

@@ -54,6 +54,24 @@ Sur le routeur, redirige vers l'IP du PC :
 
 **N'ouvre jamais les ports 5397 et 5398** : ils contrôlent le serveur et le jeu. Mets toujours un mot de passe d'accès et un mot de passe admin différents l'un de l'autre. Le bouton **Vérifier le réseau et les ports** à l'étape 10. Serveur t'aide à vérifier.
 
+### CGNAT, double routeur et VPN
+
+Si ton fournisseur utilise le CGNAT (une IP publique partagée entre plusieurs clients), ouvrir les ports sur le routeur ne sert à rien : les amis n'atteignent pas le serveur. À partir de la version 1.0.7, **Vérifier le réseau et les ports** te prévient quand il trouve une adresse CGNAT sur le chemin vers Internet. Tu peux aussi comparer l'IP WAN affichée sur la page du routeur avec l'IP publique affichée par l'app : si elles sont différentes, tu es derrière un CGNAT ou un second routeur. Dans ce cas, demande une IP publique à ton fournisseur, ou ouvre les ports sur les deux routeurs. Les VPN (Hamachi, ZeroTier et similaires) ne sont pas gérés par l'app.
+
+## Serveur sur le même PC que le jeu
+
+Un PC séparé est l'idéal, mais beaucoup n'en ont qu'un, et l'app est aussi faite pour ce cas :
+
+- Le serveur dédié est un programme séparé : l'app l'installe avec SteamCMD dans son propre dossier, jamais dans celui du jeu.
+- Le jeu et le serveur utilisent tous les deux le port 5397 pour leur interface web : avant chaque démarrage, l'app déplace celle du serveur sur le 5398, pour éviter le conflit.
+- Démarrer le serveur pendant que le jeu charge ralentit les deux : avec **Démarrer d'abord le jeu**, l'app attend que le jeu soit au menu, puis démarre le serveur toute seule.
+- Pour les grands événements, un PC séparé reste préférable : le serveur ne prend pas de ressources au jeu.
+
+## Paquets et DLC payants
+
+- Les amis téléchargent voitures, circuits et événements uniquement depuis le dossier `Packages` du serveur : chaque `.rfcmp` et `.rfmod` doit s'y trouver, sinon ils reçoivent une erreur en rejoignant. La Bibliothèque signale ce qui manque (*Paquet manquant*) et peut le copier depuis le jeu, et les événements créés avec l'app y placent leur `.rfmod` tout seuls.
+- Les DLC officiels payants ne s'ouvrent sur le serveur qu'avec `ServerUnlock.bin`, que le jeu crée dans son dossier `UserData` pour le contenu que tu possèdes. L'app le copie dans le dossier `UserData` du serveur avant d'installer du contenu et avant chaque démarrage. Si le serveur est sur un autre PC, copie ce fichier toi-même, et de nouveau après avoir acheté de nouveaux DLC.
+
 ## Anti-triche
 
 À l'étape 9. Chat et ping, l'appli peut signaler les pilotes aux tours ou vitesses impossibles et les sauts d'un point à l'autre de la piste, en comparant chacun aux autres de la même classe. Elle ne déconnecte personne : elle prévient et écrit tout dans le journal des suspects (`sospetti.log`), puis c'est celui qui gère le serveur qui décide. Le serveur ne voit pas à l'intérieur du PC des pilotes, il trouve donc les effets des triches, pas les programmes.
