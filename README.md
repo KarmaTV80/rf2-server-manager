@@ -52,7 +52,7 @@ On the router, forward to the PC's IP:
 | 64297 | TCP | File downloads by clients |
 | 64298 and 64299 | UDP | Steam: without them the server doesn't appear in the game's list |
 
-**Never open ports 5397 and 5398**: they control the server and the game. Always set a join password and an admin password that differ from each other. The **Check network and ports** button in step 10. Server helps you check.
+**Never open ports 5397 and 5398**: they control the server and the game. Always set a join password and an admin password that differ from each other. The **Check network and ports** button in step 10. Server helps you check: it runs from your PC, so only a test from another connection confirms the ports are open.
 
 ### CGNAT, double router and VPN
 
@@ -62,8 +62,8 @@ If your provider uses CGNAT (one public IP shared by several customers), forward
 
 A separate PC is the ideal setup, but many people have only one, and the app is designed for that case too:
 
-- The dedicated server is a separate program: the app installs it with SteamCMD in a folder of its own, never inside the game's folder.
-- Game and server both use port 5397 for their web interface: before every start the app moves the server's to 5398, so they don't clash.
+- The dedicated server is a separate program: the app installs it with SteamCMD in a folder of its own. The game also contains a dedicated server, but from version 1.0.11 the app refuses the game's folder, so it can't modify the game.
+- Game and server both use port 5397 for their web interface: before every start if the server is still on 5397 the app moves it to 5398, so they don't use the same port.
 - Starting the server while the game is loading slows both down: with **Start the game first** the app waits until the game is in the menu, then starts the server by itself.
 - For big events a separate PC is still better: the server doesn't take resources away from the game.
 

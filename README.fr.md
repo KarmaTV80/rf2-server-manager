@@ -52,7 +52,7 @@ Sur le routeur, redirige vers l'IP du PC :
 | 64297 | TCP | Téléchargement des fichiers par les clients |
 | 64298 et 64299 | UDP | Steam : sans eux le serveur n'apparaît pas dans la liste du jeu |
 
-**N'ouvre jamais les ports 5397 et 5398** : ils contrôlent le serveur et le jeu. Mets toujours un mot de passe d'accès et un mot de passe admin différents l'un de l'autre. Le bouton **Vérifier le réseau et les ports** à l'étape 10. Serveur t'aide à vérifier.
+**N'ouvre jamais les ports 5397 et 5398** : ils contrôlent le serveur et le jeu. Mets toujours un mot de passe d'accès et un mot de passe admin différents l'un de l'autre. Le bouton **Vérifier le réseau et les ports** à l'étape 10. Serveur t'aide à vérifier : il part de ton PC, donc seul un test depuis une autre connexion confirme que les ports sont ouverts.
 
 ### CGNAT, double routeur et VPN
 
@@ -62,8 +62,8 @@ Si ton fournisseur utilise le CGNAT (une IP publique partagée entre plusieurs c
 
 Un PC séparé est l'idéal, mais beaucoup n'en ont qu'un, et l'app est aussi faite pour ce cas :
 
-- Le serveur dédié est un programme séparé : l'app l'installe avec SteamCMD dans son propre dossier, jamais dans celui du jeu.
-- Le jeu et le serveur utilisent tous les deux le port 5397 pour leur interface web : avant chaque démarrage, l'app déplace celle du serveur sur le 5398, pour éviter le conflit.
+- Le serveur dédié est un programme séparé : l'app l'installe avec SteamCMD dans son propre dossier. Le jeu contient aussi un serveur dédié, mais à partir de la version 1.0.11 l'app refuse le dossier du jeu, pour ne pas pouvoir le modifier.
+- Le jeu et le serveur utilisent tous les deux le port 5397 pour leur interface web : avant chaque démarrage, si le serveur est encore sur le 5397, l'app le déplace sur le 5398, pour qu'ils n'utilisent pas le même port.
 - Démarrer le serveur pendant que le jeu charge ralentit les deux : avec **Démarrer d'abord le jeu**, l'app attend que le jeu soit au menu, puis démarre le serveur toute seule.
 - Pour les grands événements, un PC séparé reste préférable : le serveur ne prend pas de ressources au jeu.
 

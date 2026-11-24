@@ -52,7 +52,7 @@ En el router redirige hacia la IP del PC:
 | 64297 | TCP | Descarga de archivos por parte de los clientes |
 | 64298 y 64299 | UDP | Steam: sin ellos el servidor no aparece en la lista del juego |
 
-**No abras nunca los puertos 5397 y 5398**: controlan el servidor y el juego. Pon siempre una contraseña de acceso y una contraseña de administrador distintas entre sí. El botón **Comprobar red y puertos** del paso 10. Servidor te ayuda a comprobarlo.
+**No abras nunca los puertos 5397 y 5398**: controlan el servidor y el juego. Pon siempre una contraseña de acceso y una contraseña de administrador distintas entre sí. El botón **Comprobar red y puertos** del paso 10. Servidor te ayuda a comprobarlo: se ejecuta desde tu PC, así que solo una prueba desde otra conexión confirma que los puertos están abiertos.
 
 ### CGNAT, doble router y VPN
 
@@ -62,8 +62,8 @@ Si tu proveedor usa CGNAT (una IP pública compartida entre varios clientes), ab
 
 Un PC aparte es lo ideal, pero mucha gente tiene uno solo, y la app está pensada también para ese caso:
 
-- El servidor dedicado es un programa aparte: la app lo instala con SteamCMD en su propia carpeta, nunca dentro de la del juego.
-- Juego y servidor usan los dos el puerto 5397 para su interfaz web: antes de cada inicio la app mueve la del servidor al 5398, así no chocan.
+- El servidor dedicado es un programa aparte: la app lo instala con SteamCMD en su propia carpeta. El juego también contiene un servidor dedicado, pero desde la versión 1.0.11 la app rechaza la carpeta del juego, así no puede modificarlo.
+- Juego y servidor usan los dos el puerto 5397 para su interfaz web: antes de cada inicio, si el servidor sigue en el 5397, la app lo mueve al 5398, así no usan el mismo puerto.
 - Iniciar el servidor mientras el juego carga ralentiza a los dos: con **Iniciar primero el juego** la app espera a que el juego esté en el menú y luego inicia el servidor sola.
 - Para eventos grandes sigue siendo mejor un PC aparte: el servidor no quita recursos al juego.
 

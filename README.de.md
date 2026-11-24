@@ -52,7 +52,7 @@ Leite am Router auf die IP des PCs weiter:
 | 64297 | TCP | Herunterladen der Dateien durch die Clients |
 | 64298 und 64299 | UDP | Steam: Ohne sie erscheint der Server nicht in der Liste des Spiels |
 
-**Öffne niemals die Ports 5397 und 5398**: Sie steuern den Server und das Spiel. Setze immer ein Beitrittspasswort und ein Admin-Passwort, die sich unterscheiden. Der Button **Netzwerk und Ports prüfen** in Schritt 10. Server hilft dir bei der Prüfung.
+**Öffne niemals die Ports 5397 und 5398**: Sie steuern den Server und das Spiel. Setze immer ein Beitrittspasswort und ein Admin-Passwort, die sich unterscheiden. Der Button **Netzwerk und Ports prüfen** in Schritt 10. Server hilft dir bei der Prüfung: Sie läuft auf deinem PC, erst ein Test über eine andere Verbindung bestätigt also, dass die Ports offen sind.
 
 ### CGNAT, doppelter Router und VPN
 
@@ -62,8 +62,8 @@ Wenn dein Anbieter CGNAT nutzt (eine öffentliche IP für mehrere Kunden), bring
 
 Ein eigener PC ist ideal, aber viele haben nur einen, und die App ist auch für diesen Fall gemacht:
 
-- Der dedizierte Server ist ein eigenes Programm: Die App installiert ihn mit SteamCMD in einem eigenen Ordner, nie im Ordner des Spiels.
-- Spiel und Server nutzen beide Port 5397 für ihre Weboberfläche: Vor jedem Start legt die App die des Servers auf 5398, damit sie sich nicht stören.
+- Der dedizierte Server ist ein eigenes Programm: Die App installiert ihn mit SteamCMD in einem eigenen Ordner. Auch das Spiel enthält einen dedizierten Server, aber ab Version 1.0.11 lehnt die App den Ordner des Spiels ab, damit sie es nicht verändern kann.
+- Spiel und Server nutzen beide Port 5397 für ihre Weboberfläche: Ist der Server noch auf 5397, legt ihn die App vor jedem Start auf 5398, damit sie nicht denselben Port nutzen.
 - Den Server zu starten, während das Spiel lädt, bremst beide: Mit **Zuerst das Spiel starten** wartet die App, bis das Spiel im Menü ist, und startet dann den Server selbst.
 - Für große Events ist ein eigener PC trotzdem besser: Der Server nimmt dem Spiel keine Ressourcen weg.
 
