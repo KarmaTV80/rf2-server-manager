@@ -83,7 +83,7 @@ Un PC séparé est l'idéal, mais beaucoup n'en ont qu'un, et l'app est aussi fa
 
 ## Signaler un problème
 
-Utilise **Signaler** en haut à droite de l'app, ou **Info → Signaler un problème** (à partir de la version 1.0.6). L'app affiche le journal déjà sans nom d'utilisateur Windows, noms des pilotes, Steam ID, adresses IP et messages du chat, l'enregistre dans un fichier texte et ouvre sur GitHub le [formulaire de signalement](https://github.com/KarmaTV80/rf2-server-manager/issues/new?template=segnalazione.yml) : décris ce qui s'est passé et joins le fichier. Les signalements sont publics et demandent un compte GitHub gratuit. Le bouton **Ouvrir le dossier des journaux** est à l'étape 1. Préparer.
+Utilise **Signaler** en haut à droite de l'app, ou **Info → Signaler un problème** (à partir de la version 1.0.6). L'app affiche le journal après avoir masqué les données qu'elle reconnaît (nom d'utilisateur Windows, noms des pilotes, Steam ID, adresses IP publiques et messages du chat). Relis-le avant de le partager, car quelque chose a pu lui échapper. L'app l'enregistre dans un fichier texte et ouvre sur GitHub le [formulaire de signalement](https://github.com/KarmaTV80/rf2-server-manager/issues/new?template=segnalazione.yml) : décris ce qui s'est passé et joins le fichier. Les signalements sont publics et demandent un compte GitHub gratuit. Le bouton **Ouvrir le dossier des journaux** est à l'étape 1. Préparer.
 
 ## Limites connues
 

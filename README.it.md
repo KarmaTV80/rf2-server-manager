@@ -83,7 +83,7 @@ Nel passo 9. Chat e ping l'app può segnalare i piloti con giri o velocità impo
 
 ## Segnalare un problema
 
-Usa **Segnala** in alto a destra nell'app, oppure **Info → Segnala un problema** (dalla versione 1.0.6). L'app mostra il registro già senza nome utente di Windows, nomi dei piloti, Steam ID, indirizzi IP e messaggi della chat, lo salva in un file di testo e apre su GitHub il [modulo delle segnalazioni](https://github.com/KarmaTV80/rf2-server-manager/issues/new?template=segnalazione.yml): descrivi cosa è successo e allega il file. Le segnalazioni sono pubbliche e serve un account GitHub gratuito. Il pulsante **Apri cartella registro** è nel passo 1. Prepara.
+Usa **Segnala** in alto a destra nell'app, oppure **Info → Segnala un problema** (dalla versione 1.0.6). L'app mostra il registro dopo aver nascosto i dati che riconosce (nome utente di Windows, nomi dei piloti, Steam ID, indirizzi IP pubblici e messaggi della chat). Rileggilo prima di condividerlo, perché qualcosa può essere sfuggito. L'app lo salva in un file di testo e apre su GitHub il [modulo delle segnalazioni](https://github.com/KarmaTV80/rf2-server-manager/issues/new?template=segnalazione.yml): descrivi cosa è successo e allega il file. Le segnalazioni sono pubbliche e serve un account GitHub gratuito. Il pulsante **Apri cartella registro** è nel passo 1. Prepara.
 
 ## Limiti noti
 

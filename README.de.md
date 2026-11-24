@@ -83,7 +83,7 @@ In Schritt 9. Chat und Ping kann die App Fahrer mit unmöglichen Runden oder Ges
 
 ## Ein Problem melden
 
-Nutze **Melden** oben rechts in der App oder **Info → Problem melden** (ab Version 1.0.6). Die App zeigt das Protokoll bereits ohne Windows-Benutzername, Fahrernamen, Steam-IDs, IP-Adressen und Chatnachrichten, speichert es als Textdatei und öffnet auf GitHub das [Meldeformular](https://github.com/KarmaTV80/rf2-server-manager/issues/new?template=segnalazione.yml): Beschreibe, was passiert ist, und hänge die Datei an. Meldungen sind öffentlich und brauchen ein kostenloses GitHub-Konto. Der Button **Protokollordner öffnen** ist in Schritt 1. Vorbereiten.
+Nutze **Melden** oben rechts in der App oder **Info → Problem melden** (ab Version 1.0.6). Die App zeigt das Protokoll, nachdem sie die erkannten Daten ausgeblendet hat (Windows-Benutzername, Fahrernamen, Steam-IDs, öffentliche IP-Adressen und Chatnachrichten). Lies es vor dem Teilen, denn etwas kann übersehen worden sein. Die App speichert es als Textdatei und öffnet auf GitHub das [Meldeformular](https://github.com/KarmaTV80/rf2-server-manager/issues/new?template=segnalazione.yml): Beschreibe, was passiert ist, und hänge die Datei an. Meldungen sind öffentlich und brauchen ein kostenloses GitHub-Konto. Der Button **Protokollordner öffnen** ist in Schritt 1. Vorbereiten.
 
 ## Bekannte Grenzen
 

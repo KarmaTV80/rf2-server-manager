@@ -83,7 +83,7 @@ In step 9. Chat and ping the app can report drivers with impossible laps or spee
 
 ## Reporting a problem
 
-Use **Report** at the top right of the app, or **Info → Report a problem** (from version 1.0.6). The app shows the log with Windows user name, driver names, Steam IDs, IP addresses and chat messages already removed, saves it to a text file and opens the [report form](https://github.com/KarmaTV80/rf2-server-manager/issues/new?template=segnalazione.yml) on GitHub: describe what happened and attach the file. Reports are public and need a free GitHub account. The **Open log folder** button is in step 1. Setup.
+Use **Report** at the top right of the app, or **Info → Report a problem** (from version 1.0.6). The app shows the log after hiding the data it recognizes (Windows user name, driver names, Steam IDs, public IP addresses and chat messages). Read it before sharing, because something may have been missed. The app saves it to a text file and opens the [report form](https://github.com/KarmaTV80/rf2-server-manager/issues/new?template=segnalazione.yml) on GitHub: describe what happened and attach the file. Reports are public and need a free GitHub account. The **Open log folder** button is in step 1. Setup.
 
 ## Known limits
 

@@ -83,7 +83,7 @@ No passo 9. Chat e ping o app pode sinalizar pilotos com voltas ou velocidades i
 
 ## Relatar um problema
 
-Use **Relatar** no canto superior direito do app, ou **Info → Relatar um problema** (a partir da versão 1.0.6). O app mostra o registro já sem nome de usuário do Windows, nomes dos pilotos, Steam ID, endereços IP e mensagens do chat, salva-o em um arquivo de texto e abre no GitHub o [formulário de relatos](https://github.com/KarmaTV80/rf2-server-manager/issues/new?template=segnalazione.yml): descreva o que aconteceu e anexe o arquivo. Os relatos são públicos e é preciso uma conta gratuita do GitHub. O botão **Abrir pasta de registros** está no passo 1. Preparar.
+Use **Relatar** no canto superior direito do app, ou **Info → Relatar um problema** (a partir da versão 1.0.6). O app mostra o registro depois de ocultar os dados que reconhece (nome de usuário do Windows, nomes dos pilotos, Steam ID, endereços IP públicos e mensagens do chat). Leia antes de compartilhar, porque algo pode ter escapado. O app salva-o em um arquivo de texto e abre no GitHub o [formulário de relatos](https://github.com/KarmaTV80/rf2-server-manager/issues/new?template=segnalazione.yml): descreva o que aconteceu e anexe o arquivo. Os relatos são públicos e é preciso uma conta gratuita do GitHub. O botão **Abrir pasta de registros** está no passo 1. Preparar.
 
 ## Limites conhecidos
 

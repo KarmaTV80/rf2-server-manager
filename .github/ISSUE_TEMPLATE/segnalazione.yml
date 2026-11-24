@@ -6,10 +6,10 @@ body:
     attributes:
       value: |
         Thanks for reporting! Reports are **public**: don't write passwords, IP addresses or other people's names.
-        In the app, **Report** (top right) or **Info → Report a problem** prepares the log without personal data: attach that file below.
+        In the app, **Report** (top right) or **Info → Report a problem** prepares the log and hides the personal data it recognizes: read it, then attach that file below.
 
         Grazie della segnalazione! Le segnalazioni sono **pubbliche**: non scrivere password, indirizzi IP o nomi di altre persone.
-        Nell'app, **Segnala** (in alto a destra) o **Info → Segnala un problema** prepara il registro senza dati personali: allega quel file qui sotto.
+        Nell'app, **Segnala** (in alto a destra) o **Info → Segnala un problema** prepara il registro e nasconde i dati personali che riconosce: rileggilo, poi allega quel file qui sotto.
   - type: input
     id: version
     attributes:
