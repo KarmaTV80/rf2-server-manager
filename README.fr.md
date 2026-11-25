@@ -50,7 +50,9 @@ Sur le routeur, redirige vers l'IP du PC :
 |---|---|---|
 | 54297 | TCP et UDP | Simulation |
 | 64297 | TCP | Téléchargement des fichiers par les clients |
-| 64298 et 64299 | UDP | Steam : sans eux le serveur n'apparaît pas dans la liste du jeu |
+| 64299 | UDP | Steam : sans lui le serveur n'apparaît pas dans la liste du jeu |
+
+L'UDP 64298 n'est pas nécessaire : le serveur ne l'ouvre jamais (mesuré sur le vrai serveur).
 
 **N'ouvre jamais les ports 5397 et 5398** : ils contrôlent le serveur et le jeu. Mets toujours un mot de passe d'accès et un mot de passe admin différents l'un de l'autre. Le bouton **Vérifier le réseau et les ports** à l'étape 10. Serveur t'aide à vérifier : il part de ton PC, donc seul un test depuis une autre connexion confirme que les ports sont ouverts.
 

@@ -50,7 +50,9 @@ No roteador, redirecione para o IP do PC:
 |---|---|---|
 | 54297 | TCP e UDP | Simulação |
 | 64297 | TCP | Download dos arquivos pelos clientes |
-| 64298 e 64299 | UDP | Steam: sem elas o servidor não aparece na lista do jogo |
+| 64299 | UDP | Steam: sem ela o servidor não aparece na lista do jogo |
+
+A UDP 64298 não é necessária: o servidor nunca a abre (medido no servidor real).
 
 **Nunca abra as portas 5397 e 5398**: elas controlam o servidor e o jogo. Defina sempre uma senha de entrada e uma senha de admin diferentes entre si. O botão **Verificar rede e portas** no passo 10. Servidor ajuda você a verificar: ele roda no seu PC, então só um teste a partir de outra conexão confirma que as portas estão abertas.
 

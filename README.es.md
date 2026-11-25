@@ -50,7 +50,9 @@ En el router redirige hacia la IP del PC:
 |---|---|---|
 | 54297 | TCP y UDP | Simulación |
 | 64297 | TCP | Descarga de archivos por parte de los clientes |
-| 64298 y 64299 | UDP | Steam: sin ellos el servidor no aparece en la lista del juego |
+| 64299 | UDP | Steam: sin él el servidor no aparece en la lista del juego |
+
+La UDP 64298 no hace falta: el servidor nunca la abre (medido en el servidor real).
 
 **No abras nunca los puertos 5397 y 5398**: controlan el servidor y el juego. Pon siempre una contraseña de acceso y una contraseña de administrador distintas entre sí. El botón **Comprobar red y puertos** del paso 10. Servidor te ayuda a comprobarlo: se ejecuta desde tu PC, así que solo una prueba desde otra conexión confirma que los puertos están abiertos.
 
